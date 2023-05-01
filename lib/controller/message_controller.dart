@@ -13,17 +13,27 @@ class MessageController with ChangeNotifier {
   }
 
   sendMesage(String text) async {
+    isLoadingPrimary = true;
+    notifyListeners();
     if (controller.text.isEmpty) {
+      // ignore: avoid_print
       print('Message is empty');
+      isLoadingPrimary = false;
+      notifyListeners();
     } else {
       addMessage(Message(text: DialogText(text: [text])), true);
+      notifyListeners();
+
       notifyListeners();
       DetectIntentResponse response = await dialogFlowtter.detectIntent(
           queryInput: QueryInput(text: TextInput(text: text)));
       notifyListeners();
       if (response.message == null) return;
+
       print(response.message.toString());
       addMessage(response.message!);
+      notifyListeners();
+      isLoadingPrimary = false;
       notifyListeners();
     }
   }

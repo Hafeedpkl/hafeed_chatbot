@@ -34,33 +34,41 @@ class MyHomePage extends StatelessWidget {
   }
 
   Container textSection(BuildContext context) {
-    final messageController =
-        Provider.of<MessageController>(context, listen: false);
     final size = MediaQuery.of(context).size;
     return Container(
       margin: const EdgeInsets.all(10),
       height: size.height * 0.05,
       width: double.infinity,
       // color: Colors.white,
-      child: TextField(
-        controller: messageController.controller,
-        decoration: InputDecoration(
-            contentPadding: const EdgeInsets.all(8),
-            hintText: 'Type something..',
-            suffixIcon: IconButton(
-                onPressed: () {
-                  messageController
-                      .sendMesage(messageController.controller.text);
-                  messageController.controller.clear();
-                },
-                icon: const Icon(
-                  Icons.send,
-                ))),
-        onSubmitted: (value) {
-          messageController.sendMesage(messageController.controller.text);
-          messageController.controller.clear();
-        },
-      ),
+      child: Consumer<MessageController>(builder: (context, value, _) {
+        return TextField(
+          controller: value.controller,
+          decoration: InputDecoration(
+              contentPadding: const EdgeInsets.all(8),
+              hintText: 'Type something..',
+              suffixIcon: value.isLoadingPrimary == false
+                  ? IconButton(
+                      onPressed: () {
+                        value.sendMesage(value.controller.text);
+                        value.controller.clear();
+                      },
+                      icon: const Icon(
+                        Icons.send,
+                      ))
+                  : CircleAvatar(
+                      backgroundColor: Colors.transparent,
+                      radius: 10,
+                      child: CircleAvatar(
+                          backgroundColor: Colors.transparent,
+                          radius: 10,
+                          child: CircularProgressIndicator()),
+                    )),
+          onSubmitted: (submit) {
+            value.sendMesage(value.controller.text);
+            value.controller.clear();
+          },
+        );
+      }),
     );
   }
 }

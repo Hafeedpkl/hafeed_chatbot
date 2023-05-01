@@ -6,7 +6,8 @@ class MessageController with ChangeNotifier {
   final TextEditingController controller = TextEditingController();
   late DialogFlowtter dialogFlowtter;
   bool isLoadingPrimary = false;
-  bool isLoadingSecondary = false;
+  bool isDay = false;
+  List<bool> selectDayNight = [true, false];
   initDialogFlowtter() {
     DialogFlowtter.fromFile().then((instance) => dialogFlowtter = instance);
     notifyListeners();
@@ -42,6 +43,11 @@ class MessageController with ChangeNotifier {
     // messages.add({'message': message, 'isUserMessage': isUserMessage});
     messages.insert(0, {'message': message, 'isUserMessage': isUserMessage});
 
+    notifyListeners();
+  }
+
+  themeChanger() {
+    isDay = !isDay;
     notifyListeners();
   }
 }

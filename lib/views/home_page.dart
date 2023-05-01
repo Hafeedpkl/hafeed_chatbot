@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:hafeed_chatbot/controller/message_controller.dart';
 import 'package:hafeed_chatbot/views/message_screen.dart';
@@ -14,6 +16,7 @@ class MyHomePage extends StatelessWidget {
       Provider.of<MessageController>(context, listen: false)
           .initDialogFlowtter();
     });
+
     return Scaffold(
       appBar: AppBar(
         leading: CircleAvatar(
@@ -25,6 +28,21 @@ class MyHomePage extends StatelessWidget {
             ),
           ),
         ),
+        actions: [
+          Consumer<MessageController>(builder: (context, value, _) {
+            return Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: GestureDetector(
+                child: value.isDay
+                    ? const Icon(Icons.wb_sunny_outlined)
+                    : const Icon(Icons.nightlight_outlined),
+                onTap: () {
+                  value.themeChanger();
+                },
+              ),
+            );
+          })
+        ],
         title: Text('Mr.HP bot'),
       ),
       body: Column(

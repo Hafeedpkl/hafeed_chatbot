@@ -14,16 +14,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<MessageController>(
       create: (context) => MessageController(),
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Mr.HP bot',
-        theme: ThemeData(
-          useMaterial3: true,
-          brightness: Brightness.dark,
-          primarySwatch: Colors.blue,
-        ),
-        home: const MyHomePage(),
-      ),
+      child: Consumer<MessageController>(builder: (context, value, _) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Mr.HP Bot',
+          theme: ThemeData(
+            brightness: Brightness.light,
+            useMaterial3: true,
+          ),
+          darkTheme: ThemeData(useMaterial3: true, brightness: Brightness.dark),
+          themeMode: value.isDay ? ThemeMode.light : ThemeMode.dark,
+          home: const MyHomePage(),
+        );
+      }),
     );
   }
 }

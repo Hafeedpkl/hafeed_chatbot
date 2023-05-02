@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "hafeed-chatbot",
+  "private_key_id": "9f4e5ea4de47b2beec94411347b50e9ef5f1f5be",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZ7JXPrlKrKFec\nAn9WgAhAFIV9AkOYIQfPfnXJmacuat/CDP/mMmHqXmffoGMfjFdUxTUuyWlOcj6L\nxrSUJNvGheAwGcPxZsUenCttRvvDsrm1eBl4Exx1Cia4077ikidESviGBGYwGkD+\n0I2qo318DCDHUWj7thjxdMsPh8vrXUyoIodMbPeos7WMBwpA+er/3VDxixYijRjN\nWXyJCEdoRbnff03eyKfltfjshbqmwtDml3MGBx0x/LWLOQlDvSj8N8zzoJjmbk1T\nYgigslTlpR6lGsVmm4nYAbns5s1hKAkrCBpN4a83BJptFwuM1JftixKsiej+0KxK\nTSBdCXVrAgMBAAECggEABzdm6S3l1w9GJtrDLJbDypreysN1NyMWBMUP7Qp6CZJk\nA37Ra/hn2zwNgmHDEflOHHbgxebtr3BoDj/iCoaxFLfy6fBIfCkvj7uTLgAi03Ud\nK1tuasQA9irx0Sybl6wjwb2L0STfJkXruFtNfalLmI8THM1xai9MvgLABT9sT6PV\ntUkNzHHErlxTz9Z4q9LPJ7ziYiCmXZzmsLC8CNgxbF5oEGQOapOJAoKkkSttzBrW\n2Bb33oHrlXIVMmyMte7BdWxzHoUID4cnG0vhu7ZJY2peZULK2uA0NhRGPAgyIrRr\n+Sa/AU/dy3rMqnBAYrpJeasYLvNyu3W67SoVyRS9tQKBgQD3YZjnit0S6FSEtTr/\neHiQNyFPzk0Wcv7fSusEvXiy37zeddnk0j5Zu0S7X6EkNiczm45/im5xmCJuy9V3\nNoOjkRfkGw4pQyg1t4qv86P/gbdi7wHBQ8LEnZBni1BxCMGDgvwwvKNqlkh+YFjn\nFlt86mpQ3BvaMq0IzMjTWcel5wKBgQDhhEJVCWAay8MxUzqhFLf5EsrNelgEsYEP\nwelj4lnZ6YbcE7KTySGlrcgxkNYu+dbLamr0vbipHUZhAonZh43M0GebldjzRDkM\n1GvsPgCHW0ddEPbaVTnTMKl8Ecc+fNocax6F9aSYRZC5mbC1DSXCWmkgac4w5h7K\nVksjT5U73QKBgEfcxCxO/JWnhBXhB7h66JsMSNMEHQSudzeqbcc8uzlLIXSGS7vb\nD13FttuvlgIM8Spev/Bw6FB7X1VMRUCSR39WgNg0u9JkveOM4+7lGfj5V6qXv6zC\n4Gt5Uh+iKsYLQxvPCy+lPNuTuI9tsaW/qugIuMWwiy7Bld5+jsBGzmZ1AoGBALkc\nmmI47uUv6so7Oj3sxtKxpTyjN0qq9XicwFoX+48OzH8rwALlLzRTAKgG7nji5XhV\novPAI6rVd+a7cbHYPgIn81PX3ZxZnMa2OtxRTJfOyjZPbYFsQankIMrRwQ2+6D45\ng3WMXA4N1C01RcJnx13QXsiXcQPccNu/l6+lbKcVAoGAN5R4kN2ewulhEzsQIZti\nzwKV/RrdKg35B6uoE8OKP3iz6/1JlhYFgLOH01kEHSvGsyZDBZR+riUj6hjLUUs4\nr4WRusg4xO8SNqazP3KzGNSlLI56OO771QEmmDudrrhbcNulxPVUXKq3mgkrilvP\nnlyjEjiW8UCNtcAkxUYrBXA=\n-----END PRIVATE KEY-----\n",
+  "client_email": "hafeed-chatbot@hafeed-chatbot.iam.gserviceaccount.com",
+  "client_id": "107479953171421867221",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/hafeed-chatbot%40hafeed-chatbot.iam.gserviceaccount.com"
+}
